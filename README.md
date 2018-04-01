@@ -1,3 +1,10 @@
+# Overall
+Web &amp; android applications to help a parent monitor his/her childrens' driving
+
+# Contents
+1. Speed: website
+2. SafetyFirst: android application
+
 # How to run website:
 1. download all requirements in requirements.txt
 In separate terminal tabs:
@@ -6,11 +13,6 @@ In separate terminal tabs:
 4. celery -A speed.celeryconfig worker -l info --concurrency=1
 Optional (for testing purposes):
 5. ./client.py
-
-
-
-# Speed
-Web &amp; android applications to help a parent monitor his/her childrens' driving
 
 # Technology
 Uses django, python, javascript, django-channels, celery, googe-maps api, twilio, amazon rds, java
