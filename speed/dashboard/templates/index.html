@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 //EN">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<html>
+	<head>
+		<title>Home</title>
+	    <meta name="viewport" content="width=device-width" content="initial-scale=0.9">
+	    <meta charset="utf-8">
+	    <style>
+		      /* Always set the map height explicitly to define the size of the div
+		       * element that contains the map. */
+		      #map {
+		        height: 100%;
+		      }
+		      /* Optional: Makes the sample page fill the window. */
+		      html, body {
+		        height: 100%;
+		        margin: 0;
+		        padding: 0;
+		      }
+	    </style>
+	    {% load static %}
+	    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+	</head>
+
+	<body>
+			
+	<video autoplay muted loop id="myVideo">
+		{% load static %}
+		<source src="{% static 'media/bg_vid.mp4' %}" type="video/mp4">
+	</video>
+		<nav class="navbar navbar-fixed-top navbar-custom">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#top">Speeeeeed! :)</a>
+					<button type="button" class="navbar-toggle" data-target="#myNav" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="myNav">
+					<ul class="nav navbar-nav mn_primary_menu">
+						<li><a href="{% url 'about' %}">About Us</a></li>
+
+						<li><a href="{% url 'contact' %}">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+<div class="content">
+  		<div class="container-fluid">
+		<br> <br>
+		<center>
+				<p>
+					<h1>
+						Please Sign in...
+					</h1>
+					<a href="{% url 'login' %}" class="btn btn-default btn-lg">Log in</a>
+					&emsp;
+					<a href="{% url 'signup' %}" class="btn btn-default btn-lg">Sign up</a>
+				</p>
+		</center>
+</div>
+</div>
+<div style = "position: absolute; left: 15%; top: 45%;">
+<h4>The safest way to learn to drive. </h4>
+</div>
+	</body>
+</html>

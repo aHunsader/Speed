@@ -1,0 +1,48 @@
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <nav class="navbar navbar-fixed-top navbar-custom">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="{% url 'index' %}">Speeeeeed! :)</a>
+					<button type="button" class="navbar-toggle" data-target="#myNav" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="myNav">
+					<ul class="nav navbar-nav mn_primary_menu">
+						<li><a href="{% url 'about' %}">About Us</a></li>
+						<li><a href="{% url 'contact' %}">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=0.7">
+        {% load static %}
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    </head>
+    <body>
+            <br>
+            <br>
+            <h1>
+                &emsp; Contact Us
+            </h1>
+            <h2>
+                &emsp; tbd.<br />
+            </h2>
+            <br>
+    </body>
+</html>

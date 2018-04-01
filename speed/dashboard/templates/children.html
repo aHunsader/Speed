@@ -1,0 +1,118 @@
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=KEY_GOES_HERE&callback=initMap" async defer></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta name="viewport" content="width=device-width" content="initial-scale=0.9">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    {% load static %}
+		<link href="{% static 'css/style.css' %}" rel="stylesheet">
+  </head>
+
+  <body>
+  <nav id="nav_banner" class="navbar navbar-fixed-top navbar-custom" style="background-color: red; display: none;">
+			<div id="banner" class="container-fluid" style="background-color: red; color: black; font-weight: bold">
+				WARNING!
+			</div>
+		</nav>
+    {% load static %}
+    <script>
+    var x = 37.3382;
+    var y = -121.8863;
+
+    var map, marker;
+    var marker2;
+
+    var link = "{% static 'media/icon.png' %}"
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: x, lng: y},
+          zoom: 13
+        });
+        marker = new google.maps.Marker({
+          position: {lat: x, lng: y},
+          map: map,
+          icon: link,
+          scaledSize: new google.maps.Size(5, 5)
+        });
+        marker2 = new google.maps.Marker({
+          position: {lat: x, lng: y},
+          map: map,
+          icon: link,
+          scaledSize: new google.maps.Size(5, 5)
+        });
+      }
+    </script>
+
+  <div class="row">
+    <div class="col-md-8">
+      <center><div id="map" style="height: 98%; width: 98%; border:1px solid black; border-radius: 10px;"></div></center>
+    </div>
+    <div class="col-md-3" style="background-color:rgba(30, 30, 60, 0.2); height: 100%; width: 31%">
+	<br>
+	<div style="background-color: #fbfafe; border-radius:10px; opacity: 30%; width: 400px">
+	<div style="border:1.5px solid blue; border-radius:10px; width: 400px">
+  		<div class="container-fluid">
+			<p>
+				<h2 id="username1"></h2>
+        <br>
+				<h3>
+          <p id="speed1"></p>
+          <p id="acceleration1"></p>
+          <p id="speed_limit1"></p>
+          <p id="street1"></p>
+				</h3>
+				<br>
+			</p>
+		</div>
+		</div>
+	</div>
+	<br>
+	<div style="background-color: #fbfafe ; border-radius:10px; opacity: 30%; width: 400px">
+	<div style="border:1.5px solid red; border-radius:10px; width: 400px">
+  		<div class="container-fluid">
+			<p>
+				<h2 id="username2"></h2>
+        <br>
+				<h3>
+          <p id="speed2"></p>
+          <p id="acceleration2"></p>
+          <p id="speed_limit2"></p>
+          <p id="street2"></p>
+				</h3>
+				<br>
+			</p>
+		</div>
+		</div>
+	</div>
+	</div>
+	
+  </div>
+
+  </body>
+</html>
+{% load static %}
+<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
