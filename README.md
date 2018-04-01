@@ -12,6 +12,9 @@ Optional (for testing purposes):
 # Speed
 Web &amp; android applications to help a parent monitor his/her childrens' driving
 
+# Technology
+Uses django, python, javascript, django-channels, celery, googe-maps api, twilio, amazon rds, java
+
 ## Inspiration
 This application was inspired by the vast amounts of car crashes that occur in the United States every day because of reckless driving. 
 
